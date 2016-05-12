@@ -3,6 +3,9 @@
 (function ($) {
     "use strict";
     $.fn.gallery = function (options) {
+
+
+
         options = $.extend({}, $.fn.gallery.defaults, options);
 
         $.fn.gallery.globals.numberOfChildren = $(this).children().length;
@@ -29,6 +32,11 @@
             $.fn.gallery.defauls.width = ((options.thumbnailSize + options.margins) * options.items) + options.margins + 3 + options.thumbnailSize;
         }
 
+        //Create the selected-box class
+        var style = document.createElement('style');
+        style.type = 'text/css';
+        style.innerHTML = '.selected-box { outline: 1px solid ' + options.outline + '; }';
+        document.getElementsByTagName('head')[0].appendChild(style);
 
         $(this).css({
             'width': ((options.thumbnailSize + options.margins) * options.items) + options.margins + 3,
@@ -165,7 +173,8 @@
         'height': 500,
         'width': 600,
         'color': 'lightgrey',
-        'fill': 'red'
+        'fill': 'red',
+        'outline': 'red'
     };
 
     $.fn.gallery.globals = {

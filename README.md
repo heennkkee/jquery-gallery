@@ -27,5 +27,7 @@ You can pass some options to your gallery as an object in the function call, the
 * 'width': width of the gallery
 * 'color': filling color of the gallery
 * 'fill': color of the arrows to look around in the gallery with.
+* 'outline': color of the outline of the selected thumbnail
+
 
 Enjoy!
