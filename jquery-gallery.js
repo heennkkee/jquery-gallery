@@ -147,13 +147,13 @@
 
         $(this).click(function (e) {
 
-            if ($.fn.gallery.globals.selected === e.toElement || e.toElement === this || e.toElement === $.fn.gallery.globals.jsList) {
+            if ($.fn.gallery.globals.selected === e.target || e.target === this || e.target === $.fn.gallery.globals.jsList) {
                 return;
             }
 
             $($.fn.gallery.globals.selected).removeClass('selected-box');
 
-            $.fn.gallery.globals.selected = e.toElement;
+            $.fn.gallery.globals.selected = e.target;
             $($.fn.gallery.globals.selected).addClass('selected-box');
 
 
